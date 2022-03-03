@@ -10,7 +10,7 @@ const Home = () => {
   const [first_name, setFirst_name] = useState("Sahil");
   const [last_name, setLast_name] = useState("Singh");
   const [email, setEmail] = useState("sahil@test.com");
-  const [myid, setMyid] = useState("");
+  const [avatar, setAvatar] = useState("");
   const [page, setPage] = useState(1);
 
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const Home = () => {
     setEmail(data.email);
     setFirst_name(data.first_name);
     setLast_name(data.last_name);
-    setMyid(index);
+    setAvatar(data.avatar);
   };
 
   useEffect(() => {
@@ -130,11 +130,7 @@ const Home = () => {
 
           <div className="col-md-2 box_main shadow">
             <div className="">
-              <img
-                className="box_img"
-                src={`https://reqres.in/img/faces/${myid + 1}-image.jpg`}
-                alt="img"
-              />
+              <img className="box_img" src={avatar} alt="img" />
             </div>
             <div className="box_name">
               <h4 className="box_name_h4">
