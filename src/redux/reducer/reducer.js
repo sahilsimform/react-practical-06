@@ -1,5 +1,3 @@
-import { GET_DETAILS } from "../type";
-
 const initialState = {
   details: [],
   loading: false,
@@ -8,11 +6,6 @@ const initialState = {
 
 const Reducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_DETAILS:
-      return {
-        ...state,
-        details: action.payload,
-      };
     case "FETCH_USERS_REQUEST":
       return { ...state, loading: true };
     case "FETCH_USERS_SUCCESS":
