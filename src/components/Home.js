@@ -16,8 +16,6 @@ const Home = () => {
   const dispatch = useDispatch();
   const responseData = useSelector((state) => state.reducer.details);
   const isLoading = useSelector((state) => state.reducer.loading);
-  console.log(responseData);
-  console.log(isLoading);
 
   const onHoverHandler = (data, index) => {
     setEmail(data.email);
